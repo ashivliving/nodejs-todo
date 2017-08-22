@@ -6,10 +6,10 @@ var todoController = require('./controllers/todoController');
 app.set('view engine', 'ejs');
 
 //statiic file
-app.use('/assets',express.static('./public'));
+app.use('/assets',express.static('./public/assets'));
 
 //fire controllers
-todoController();
+todoController(app);
 
 
 //listen port 3000
